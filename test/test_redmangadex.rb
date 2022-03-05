@@ -2,12 +2,12 @@
 
 require "test_helper"
 
-class TestRedmangadex < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::Redmangadex::VERSION
-  end
+class TestRedMangadex < Minitest::Test
+	def test_that_it_has_a_version_number
+		refute_nil ::RedMangadex::VERSION
+	end
 
-  def test_it_does_something_useful
-    assert false
-  end
+	def test_it_does_something_useful
+		assert false
+	end
 end

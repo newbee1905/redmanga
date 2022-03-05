@@ -9,5 +9,14 @@ Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
 
+Layout/IndentationWidth:
+  Width: 1
+
+Layout/IndentationStyle:
+  EnforcedStyle: tabs
+
+Metrics/MethodLength:
+  Enabled: false
+
 Layout/LineLength:
   Max: 120

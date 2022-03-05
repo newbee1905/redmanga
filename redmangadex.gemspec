@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["newbee1905", "Le Minh Vu"]
 	spec.email = ["beenewminh@outlook.com", "vuleminh190503@hotmail.com", "vugia.leminh1905@gmail.com"]
 
-  spec.summary = "Read Manga from CLI with Mangadex'sapi"
-  spec.description = "Read Manga from CLI with Mangadex'sapi"
+  spec.summary = "Read Manga from CLI with Mangadex's api"
+  spec.description = "Read Manga from CLI with Mangadex's api"
 	spec.homepage = repo
   spec.required_ruby_version = ">= 2.6.0"
 
@@ -25,10 +25,9 @@ Gem::Specification.new do |spec|
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject do |f|
-      (f == __FILE__) || f.match(%r{\A(?:(?:bin|test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
+      (f == __FILE__) || f.match(%r{\A(?:(?:test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
     end
   end
-	p spec.files
   spec.bindir = "bin"
 	spec.executables = spec.files.map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   spec.require_paths = ["lib"]

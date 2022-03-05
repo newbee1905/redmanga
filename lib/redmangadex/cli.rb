@@ -1,23 +1,25 @@
-require 'optparse'
+# frozen_string_literal: true
+
+require "optparse"
 
 module RedMangadex
-	class CLI
-		def initialize
-			@options = {}
+class CLI
 
-			OptionParser.new do |opts|
-				opts.banner = "Usage: redmangadex [options]"
+	def initialize
+		@options = {}
 
-				opts.on("-v", "--[no-]verbose", "Show extra information") do |v|
-					@options[:verbose] = v 
-				end
+		OptionParser.new do |opts|
+			opts.banner = "Usage: redmangadex [options]"
 
-			end.parse!
-
-			if @options[:verbose]
-				puts "Options: #{@options.inspect}"
-				puts "ARGV: #{ARGV.inspect}"
+			opts.on("-v", "--[no-]verbose", "Show extra information") do |v|
+				@options[:verbose] = v
 			end
-		end
+		end.parse!
+
+		return unless @options[:verbose]
+
+		puts "Options: #{@options.inspect}"
+		puts "ARGV: #{ARGV.inspect}"
 	end
+end
 end

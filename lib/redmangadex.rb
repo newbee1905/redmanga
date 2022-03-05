@@ -3,6 +3,5 @@
 require_relative "redmangadex/version"
 
 module RedMangadex
-  class Error < StandardError; end
-  # Your code goes here...
+	class Error < StandardError; end
 end
