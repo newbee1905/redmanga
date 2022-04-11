@@ -6,12 +6,6 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'redmanga'
-```
-
 And then execute:
 
     $ bundle install
@@ -22,17 +16,59 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Current support two commands `search` and `info`
+
+`redmanga search`, which aslo can be used as `redmanga`, is used to search a managa and read it
+
+`redmanga info` is used to search a managa and show some info about the manga
+ 
+Please run `redmanga help` or `redmanga -h` for clearer usage guide
+
+```
+Usage: redmanga [opts] [commands]
+
+opts:
+    -h, --help                       Display this help.
+    -V, --version                    Display current version.
+    -v, --[no-]verbose               Show extra information.
+    -g, --genres genre               Filter Manga's genres.
+    -G, --excludes-genres genre      Exclude Manga's genres.
+        --tags tag                   Filter Manga's tags.
+    -c, --country country            Filter Manga's country.
+    -f, --from year                  Only show Mangas from this year.
+    -t, --to year                    Only show Mangas to this year.
+    -T, --time days                  Only show Mangas in given days forward.
+    -C, --completed                  Only show Mangas in given days forward.
+
+commands:
+    search:
+        The command show list of mangas with the input name and open the selected it
+        `redmanga search {name}`
+        Replace {name} with the name you want to searched.
+        If no command was input, this command will be default
+    info:
+        The command show list of mangas with the input name and show its info
+        `redmanga info {name}`
+        Replace {name} with the name you want to searched.
+    version:
+        Show version
+    help:
+        Show help menu
+```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Run `bundle exec build` to build and install the dependencies of the script
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/redmanga. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/redmanga/blob/main/CODE_OF_CONDUCT.md).
+
+## Credit
+
+This Cli can be exist because of the [Comickfun's api](https://api.comick.fun/docs/static/index.html)
+
+Please check out their main website [Comickfun](https://comick.fun/)
 
 ## Code of Conduct
 

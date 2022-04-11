@@ -7,4 +7,5 @@
 /tmp/
 /Gemfile.lock
 /pkg/*
+/checksums/*
 /*.gem
