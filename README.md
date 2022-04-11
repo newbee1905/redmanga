@@ -2,9 +2,9 @@
 
 This is a Cli tool using [Comickfun's API](https://api.comick.fun/docs/static/index.html) for reading manga.
 
-The Cli use [Gosu](https://www.libgosu.org/) to render the images.
+The Cli uses [Gosu](https://www.libgosu.org/) to render the images.
 
-Current features are concurrenly loading the images without download them.
+Current features are concurrently loading the images without download them.
 
 The reason why I use Gosu is because this is actually my uni's assignment, which is a custom program using Ruby and things I have learnt in that course.
 
