@@ -2,5 +2,5 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in redmangadex.gemspec
+# Specify your gem's dependencies in redmanga.gemspec
 gemspec
