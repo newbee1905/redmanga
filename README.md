@@ -1,8 +1,12 @@
 # Redmanga
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/redmanga`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a Cli tool using [Comickfun's API](https://api.comick.fun/docs/static/index.html) for reading manga.
 
-TODO: Delete this and the text above, and describe your gem
+The Cli use [Gosu](https://www.libgosu.org/) to render the images.
+
+Current features are concurrenly loading the images without download them.
+
+The reason why I use Gosu is because this is actually my uni's assignment, which is a custom program using Ruby and things I have learnt in that course.
 
 ## Installation
 
