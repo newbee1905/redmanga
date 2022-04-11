@@ -8,7 +8,7 @@ module RedManga
 	class Manga
 		attr_accessor :title, :slug, :id, :mdid, :bayesian_rating, :demographic, :lang, :desc
 
-		def initialize(title, slug, id, _mid, bayesian_rating, demographic, lang, desc)
+		def initialize(title, slug, id, mdid, bayesian_rating, demographic, lang, desc)
 			@title = title
 			@slug = slug
 			@id = id

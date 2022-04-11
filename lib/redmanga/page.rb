@@ -55,8 +55,8 @@ module RedManga
 			@img = Gosu::Image.new @resized_blob
 		end
 
-		def draw(_win_width, _win_height)
-			update_image! if @img.nil?
+		def draw(win_width, win_height)
+			update_image!(win_width, win_height) if @img.nil?
 			@img.draw @x, @y, 0, 1.0, 1.0
 		end
 	end
