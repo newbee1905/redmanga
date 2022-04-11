@@ -37,6 +37,7 @@ Gem::Specification.new do |spec|
 	spec.add_dependency "httparty", "~> 0.17.3"
 	spec.add_dependency "rmagick", "~> 4.2.5"
 	spec.add_dependency "concurrent-ruby", "~>1.1.10"
+	spec.add_dependency "gosu", "~>1.4.3"
 	spec.add_development_dependency "rake", "~> 13.0"
 	spec.add_development_dependency "rubocop", "~> 1.21"
 
