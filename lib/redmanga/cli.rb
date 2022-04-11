@@ -75,6 +75,7 @@ module RedManga
 					opt.banner = "Usage: redmanga [opts] [commands]".blue
 					opt.separator ""
 					opt.separator "opts:".blue
+					opt.on("-h", "--help", "Display this help.") { print_help; exit 0 }
 					opt.on("-V", "--version", "Display current version.") { @opts[:version] = true }
 					opt.on("-v", "--[no-]verbose", "Show extra information.") { |v| @opts[:verbose] = (v ? 2 : 0) }
 					opt.on("-g", "--genres genre", "Filter Manga's genres.") { |genre| @manga_opts[:genres] << genre }
