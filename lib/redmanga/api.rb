@@ -16,7 +16,6 @@ module RedManga
 
 		def initialize
 			@opts = { format: :plain, query: {} }
-			@image_cdn = "https://meo%s.comick.pictures/file/comick/%s"
 		end
 
 		def search(query = {})
@@ -40,21 +39,6 @@ module RedManga
 		def chapter_content(chapter_hid)
 			res = self.class.get "/chapter/#{chapter_hid}"
 			JSON.parse res.body, symbolize_names: true
-		end
-
-		def page(file_name)
-			cdn_id = 1
-			begin
-				url = format(@image_cdn, cdn_id == 1 ? "" : cdn_id.to_s, file_name)
-				@res = HTTParty.get url
-				@blob = Magick::Image.from_blob(@res.body).first.resize_to_fit
-				Gosu::Image.new @blob
-			rescue Magick::ImageMagickError
-				cdn_id += 1
-				retry if cdn_id <= 3
-
-				Gosu::Image.new "blank.png"
-			end
 		end
 	end
 end
