@@ -12,11 +12,11 @@ The reason why I use Gosu is because this is actually my uni's assignment, which
 
 And then execute:
 
-    $ bundle install
+```bash
+bundle exec rake install:local
+```
 
-Or install it yourself as:
-
-    $ gem install redmanga
+Please add ruby gem to your PATH
 
 ## Usage
 
