@@ -1,19 +1,20 @@
 # frozen_string_literal: true
 
-require_relative "lib/redmangadex/version"
+require_relative "lib/redmanga/version"
 
 Gem::Specification.new do |spec|
-	repo = "https://github.com/newbee1905/redmangadex"
+	repo = "https://github.com/newbee1905/redmanga"
 
-  spec.name = "redmangadex"
-  spec.version = RedMangadex::VERSION
+  spec.name = "redmanga"
+  spec.version = RedManga::VERSION
   spec.authors = ["newbee1905", "Le Minh Vu"]
 	spec.email = ["beenewminh@outlook.com", "vuleminh190503@hotmail.com", "vugia.leminh1905@gmail.com"]
 
-  spec.summary = "Read Manga from CLI with Mangadex's api"
-  spec.description = "Read Manga from CLI with Mangadex's api"
+  spec.summary = "Read Manga from CLI with Comickfun's api"
+	spec.description = "A Cli tool for reading manga for my uni's assignment. Using Comickfun's api to get the manga and draw the images using Gosu."
 	spec.homepage = repo
   spec.required_ruby_version = ">= 2.6.0"
+	spec.license = "BSD-3-Clause"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
@@ -34,8 +35,9 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
 	spec.add_dependency "httparty", "~> 0.17.3"
+	spec.add_dependency "rmagick", "~> 4.2.5"
+	spec.add_dependency "concurrent-ruby", "~>1.1.10"
 	spec.add_development_dependency "rake", "~> 13.0"
-	spec.add_development_dependency "minitest", "~> 5.0"
 	spec.add_development_dependency "rubocop", "~> 1.21"
 
   # For more information and examples about making a new gem, check out our

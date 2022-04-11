@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-$LOAD_PATH << File.expand_path('lib')
-
-require 'redmangadex/cli'
-RedMangadex::CLI.new

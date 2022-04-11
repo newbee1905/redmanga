@@ -1,5 +1,15 @@
+inherit_mode:
+  merge:
+    - Exclude
+
 AllCops:
   TargetRubyVersion: 2.6
+  Exclude:
+    - lib/redmangadex/utils/string.rb
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/{rails,rake}'
 
 Style/StringLiterals:
   Enabled: true

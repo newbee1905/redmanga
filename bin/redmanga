@@ -1,0 +1,7 @@
+#!/usr/bin/ruby -W0
+
+$LOAD_PATH << File.expand_path('lib')
+
+require 'redmanga'
+cli = RedManga::CLI.new
+cli.run
