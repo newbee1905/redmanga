@@ -9,4 +9,4 @@ RuboCop::RakeTask.new :lint do |task|
 	task.fail_on_error = false
 end
 
-task default: %i[test lint]
+task default: %i[lint]
